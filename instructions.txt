@@ -1,0 +1,13 @@
+Assemble:
+as HelloWorld.s -o HelloWorld.o -arch i586
+Link:
+ld HelloWorld.o -e _main -lc -macosx_version_min 10.14 -o HelloWorld -no_pie
+Debug:
+lldb HelloWorld
+	run
+	(b main)
+	(c)
+	(gui)
+	(q)
+
+https://www.linkedin.com/pulse/assembler-mac-yes-we-can-gaetano-causio
